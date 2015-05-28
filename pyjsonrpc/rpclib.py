@@ -212,7 +212,7 @@ class JsonRpc(object):
         # Convert responses to dictionaries and filter it
         responses_ = []
         for response in responses:
-            if response.id:
+            if response.id is not None:
                 responses_.append(response.to_dict())
         responses = responses_
 
